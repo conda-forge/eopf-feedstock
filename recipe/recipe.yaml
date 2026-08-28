@@ -16,7 +16,7 @@ source:
 build:
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -31,7 +31,7 @@ requirements:
     - msgpack-python >=1.2.1
     - h2 >=4.4.1
     - setuptools >=78.1.1
-    - python-dotenv
+    - python-dotenv >=1,<2
     - pydantic >=2, <3
     - Jinja2 >=3
     - beautifulsoup4 >=4
@@ -70,6 +70,7 @@ requirements:
     - pyarrow
     - pyyaml >=6
     - psutil
+    - defusedxml
     - libgdal-jp2openjpeg
     # parallel
     - dask >=2026
